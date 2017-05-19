@@ -7,10 +7,33 @@
  */
 
 const TEST_DATA = [
-  {"_device_id": "*", "id": "b76b1e6e-0818-41d3-b77d-7ccf414961ef", "url": "https://s3.amazonaws.com/dev.assets.vistarmedia.com/creative/1oprfWZYSRy3ZidxoVxK5g/71/197/9fdb6b31-dfe0-45ba-82f5-e1d213722fd6.png", "_index": "1", "_update_date": "2016-08-09T19:34:01.477000+00:00"},
-  {"_device_id": "*", "id": "e5caae3b-964e-44b4-bb5d-21ee31b1d19d", "url": "https://s3.amazonaws.com/dev.assets.vistarmedia.com/creative/1oprfWZYSRy3ZidxoVxK5g/de/6e4/d75308bc-a674-4eaa-9a30-bef92eade350.png", "_index": "1", "_update_date": "2016-08-09T19:34:01.477000+00:00"},
-  {"_device_id": "*", "id": "9d789b3d-4473-4dc2-8784-2e0ec385af32", "url": "https://s3.amazonaws.com/dev.assets.vistarmedia.com/creative/1oprfWZYSRy3ZidxoVxK5g/98/9a1/29abfa57-921d-4c47-b6d2-014ae7519c04.jpg", "_index": "1", "_update_date": "2016-08-09T19:34:01.477000+00:00"},
-  {"_device_id": "*", "id": "9d286c0d-6b6f-4915-9f3d-ee8e762e204a", "url": "https://s3.amazonaws.com/dev.assets.vistarmedia.com/creative/1oprfWZYSRy3ZidxoVxK5g/6f/221/f331610b-c7d7-44e8-8fbd-c0b0e5d50f54.jpg", "_index": "1", "_update_date": "2016-08-09T19:34:01.477000+00:00"}
+	{
+		_update_date: 'May 19th, 2017 03:05 pm',
+		_device_id: '*',
+		_index: 'nyc',
+		data:[
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":1,"DATE_TIME":"MAY/18/2017 07 AM"},
+			{"UV_VALUE":1,"ZIP":10001,"ORDER":2,"DATE_TIME":"MAY/18/2017 08 AM"},
+			{"UV_VALUE":3,"ZIP":10001,"ORDER":3,"DATE_TIME":"MAY/18/2017 09 AM"},
+			{"UV_VALUE":5,"ZIP":10001,"ORDER":4,"DATE_TIME":"MAY/18/2017 10 AM"},
+			{"UV_VALUE":7,"ZIP":10001,"ORDER":5,"DATE_TIME":"MAY/18/2017 11 AM"},
+			{"UV_VALUE":8,"ZIP":10001,"ORDER":6,"DATE_TIME":"MAY/18/2017 12 PM"},
+			{"UV_VALUE":9,"ZIP":10001,"ORDER":7,"DATE_TIME":"MAY/18/2017 01 PM"},
+			{"UV_VALUE":8,"ZIP":10001,"ORDER":8,"DATE_TIME":"MAY/18/2017 02 PM"},
+			{"UV_VALUE":7,"ZIP":10001,"ORDER":9,"DATE_TIME":"MAY/18/2017 03 PM"},
+			{"UV_VALUE":5,"ZIP":10001,"ORDER":10,"DATE_TIME":"MAY/18/2017 04 PM"},
+			{"UV_VALUE":3,"ZIP":10001,"ORDER":11,"DATE_TIME":"MAY/18/2017 05 PM"},
+			{"UV_VALUE":1,"ZIP":10001,"ORDER":12,"DATE_TIME":"MAY/18/2017 06 PM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":13,"DATE_TIME":"MAY/18/2017 07 PM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":14,"DATE_TIME":"MAY/18/2017 08 PM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":15,"DATE_TIME":"MAY/18/2017 09 PM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":16,"DATE_TIME":"MAY/18/2017 10 PM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":17,"DATE_TIME":"MAY/18/2017 11 PM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":18,"DATE_TIME":"MAY/18/2017 12 AM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":19,"DATE_TIME":"MAY/18/2017 01 AM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":20,"DATE_TIME":"MAY/18/2017 02 AM"},
+			{"UV_VALUE":0,"ZIP":10001,"ORDER":21,"DATE_TIME":"MAY/18/2017 03 AM"}
+		]
+	}
 ];
-
 module.exports = TEST_DATA;

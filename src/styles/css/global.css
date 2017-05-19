@@ -1,3 +1,7 @@
+html {
+  background-color: rgba(100,150,250,.4);
+}
+
 @font-face {
   font-family: "SourceSansPro-Bold";
   font-style: normal;
@@ -36,10 +40,11 @@ body {
   overflow: hidden;
   display:none;
   background-repeat: none;
+  background-color: #1BA9DC;
 }
 
 .creativeContainer-header {
-  height: 730px;
+  height: 550px;
   font-size: 130px;
   line-height: 122px;
   font-weight: bold;
@@ -59,12 +64,24 @@ body {
   bottom: 0;
   left: 0;
   width: 1080px;
-  height: 60px;
+  height: 150px;
   background-color: #fff;
   font-family: "SourceSansPro-Bold";
-  color: #3598db;
-  font-size: 60px;
-  line-height: 60px;
+  color: rgba(0,0,0,.65);
+  font-size: 50px;
+}
+
+.creativeContainer-footer span {
+  position: absolute;
+  top: 45px;
+  left: 75px;
+}
+
+.creativeContainer-footer img {
+  position: absolute;
+  width: 275px;
+  right: 40px;
+  top: 30px;
 }
 
 .creativeContainer-debugger {
@@ -90,4 +107,48 @@ body {
 
 .placeholder.invisible {
   opacity: 0;
+}
+
+#uvIndexNumber {
+  text-align: center;
+  margin: 50px auto 0;
+  font-size: 30em;
+  font-weight: lighter;
+}
+
+#lineBreak {
+  border-top: 4px solid rgba(255,255,255,.5);
+  margin-bottom: 50px;
+}
+
+#uvInfo {
+  text-align: center;
+}
+
+#uvInfo h3 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 5.5em;
+  font-weight: lighter;
+  height: 175px;
+  line-height: 175px;
+  margin: 0 50px 0 0;
+}
+
+#uvInfo img {
+  height: 175px;
+  vertical-align: bottom;
+
+}
+
+#uvInfo h4 {
+  display: block;
+  width: 650px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  font-size: 3em;
+  font-weight: lighter;
+  border: 6px solid rgba(255,255,255,.8);
+  border-radius: 2px;
+  padding: 
 }
