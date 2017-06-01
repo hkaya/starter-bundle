@@ -1,6 +1,5 @@
-# LinkNYC Starter Bundle
+# LinkNYC HTML5 Creative Starter Bundle
 
-An HTML5 application built for LinkNYC.   
 This starter bundle will provide the necessary tools to build and develop content & creative on a Link.    
 With this bundle you will have the ability to test locally and package for production.
 
@@ -81,11 +80,17 @@ $ npm install
 #### Placeholder Image
 The placeholder image is displayed on initial view of your creative and when there is an error within your code.   
 The image is located in the `./src/images/` folder and can be changed by replacing the file `./src/images/placeholder.jpg`.   
-**Note: It is recommended that your placeholder image differs from your creative for debugging.**
+**Note: It is strongly recommended that your placeholder image differs from your creative for debugging.**
 
-#### Silo
-Silo manages data on a Link, providing campaigns access to the latest data stored.  When you make a change to campaign data,    
-Silo synchronizes in real time resulting in always up to the date data in your creative.   
+### API Integration
+Link Creatives are HTML5/Javascript applications and thus can pull dynamic data or content directly from API's accessible from the internet. A few things to be aware of:
+
+* There is no persistence in Link web content
+* All external calls must be whitelisted - please contact Ad Operations who can help you with this procedure
+
+#### Offline Data Distribution
+Link also provides an offline data store, Silo. Silo manages distributing datasets across a fleet of Link, providing campaigns access to the latest data stored.  When you make a change to campaign data, Silo synchronizes in real time resulting in always up to the date data in your creative.
+
 When developing locally or offline from an internet connection, data will be simulated from within the bundle at `./src/test-data.js`.    
 **Note: To simulate data correctly, data should be copied directly from your dataset in Silo.**
 
@@ -130,10 +135,10 @@ You can automatically package the `./build` folder using `$ make dist`, this wil
 
 ### Testing
 Creatives can be tested locally in local development mode to verify: correct design & visual content, silo data and events firing properly.   
-If you have access to an SBC, you can test an end to end experience by registering your sbc and trafficking your creative through the ad server.    
-**Note: Even with an SBC its recommended that you test on an actual Link to ensure proper serving, displaying and optimization of your creative in a production environment.**
+If you have access to a Link SBC, you can test an end to end experience by registering your sbc and trafficking your creative through the ad server.    
+**Note: Even with an SBC its recommended that you test on an actual Link to ensure proper serving, displaying and optimization of your creative in a street environment.**
 
-### Approved Animation Support
+### Supported HTML5 Animation Operations
 | Animation        | Status           | Notes  |
 | ------------- |:-------------:| -----:|
 | Fade-In      | ✅ | Simple opacity manipulation. |
@@ -141,10 +146,8 @@ If you have access to an SBC, you can test an end to end experience by registeri
 | Rotate      |✅  | Transforming using `rotate3d` yields much better results than `rotate`. |
 | Carousel-fade    | ✅      |   Simple opacity manipulation. |
 
-### Link Information
+### Generic Link Information
 * The time format on a Link is in UTC.
-* To make external requests from a HTML5 bundle on a Link,    
-you have to either whitelist all routes or leverage Silo.
 * Currently 1080P video is supported on a Link in MP4 format.
 
 ### Quick commands
@@ -173,4 +176,4 @@ $ make dist-custom app=${YOUR_CUSTOM_APP_NAME}
 * `Cortex:` Player on Link.
 * `Vistar:` Ad Server.
 * `SBC:` Single Board Computer.
-* `Silo:` Manages the data on a Link.
+* `Silo:` Data distribution and management layer provided with Link.
