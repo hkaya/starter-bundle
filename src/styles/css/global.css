@@ -16,14 +16,21 @@ html {
   src: url("../fonts/source-sans-pro/SourceSansPro-Light.otf") format("opentype");
 }
 
-.hide {
-  display: none;
+@font-face {
+  font-family: "Roboto-Thin";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/roboto/Roboto-Thin.ttf")
 }
 
-#content {
-  font-size: 16px;
-  letter-spacing: 0;
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/roboto/Roboto-Regular.ttf")
 }
+
+
 
 body {
   margin: 0;
@@ -34,67 +41,155 @@ body {
   width: 1080px;
   height: 1920px;
   padding: 75px;
-  font-family: Arial;
-  color: #fff;
+  font-family: "Roboto";
+  color: black;
   box-sizing: border-box;
   overflow: hidden;
   display:none;
   background-repeat: none;
-  background-color: #1BA9DC;
+  background-image: url("../../images/wnbcBackground.png");
 }
 
-.creativeContainer-header {
-  height: 550px;
-  font-size: 130px;
-  line-height: 122px;
-  font-weight: bold;
-  letter-spacing: -4px;
-}
-
-.creativeContainer-header-stroke {
-  width: 234px;
-  height: 20px;
-  font-size: 0;
-  background-color: #fff;
-  margin-bottom: 32px;
-}
-
-.creativeContainer-footer {
+#dateTime p {
+  text-transform: uppercase;
+  font-size: 48px;
+  letter-spacing: -3px;
+  color: #505050;
+  font-family: "Roboto-Light";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 1080px;
-  height: 150px;
-  background-color: #fff;
-  font-family: "SourceSansPro-Bold";
-  color: rgba(0,0,0,.65);
-  font-size: 50px;
 }
 
-.creativeContainer-footer span {
-  position: absolute;
-  top: 45px;
-  left: 75px;
+#dateTime p:first-child {
+  top: 338px;
+  left: 91px;
 }
 
-.creativeContainer-footer img {
-  position: absolute;
-  width: 275px;
-  right: 40px;
-  top: 30px;
+#dateTime p:last-child {
+  top: 338px;
+  left: 456px;
 }
 
-.creativeContainer-debugger {
+#lineBreak {
+  border-top: 2px solid rgba(0,0,0,.2);
+  width:900px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 1080px;
-  height: 60px;
-  background-color: #fff;
-  font-family: "SourceSansPro-Bold";
-  color: #3598db;
-  font-size: 60px;
-  line-height: 60px;
+  top: 450px;
+  left: 90px;
+}
+
+#weatherNow img {
+  position: absolute;
+  top: 670px;
+  left: 150px;
+  width: 250px;
+}
+
+#weatherNow h2 {
+  text-transform: uppercase;
+  position: absolute;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 68px;
+  top: 517px;
+  left: 190px;
+}
+
+#weatherNow h3 {
+  position: absolute;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 283px;
+  margin: 0;
+  top: 614px;
+  left: 469px;
+}
+
+#weatherNow h4 {
+  position: absolute;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 80px;
+  margin: 0;
+  top: 910px;
+  left: 190px;
+}
+
+#weatherNow h5 {
+  position: absolute;
+  font-family: "Roboto-Thin";
+  font-weight: normal;
+  font-size: 72px;
+  margin: 0;
+  top: 1004px;
+  left: 190px;
+}
+
+#weatherHourly {
+  position: absolute;
+  left: 189px;
+  top: 1148px;
+  height: 541px;
+  width: 1363px;
+  background-image: url(../../images/hourlyBackground.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#weatherHourly ul {
+  position: absolute;
+  list-style: none;
+  text-transform: uppercase;
+  height: 441px;
+  padding: 0px;
+}
+
+#weatherHourly ul li {
+  width: 200px;
+  text-align: center;
+}
+
+#weatherHourly ul li:first-child {
+  font-size: 54px;
+  position: inherit;
+  top: 10px;
+}
+
+#weatherHourly ul li:nth-child(3) { 
+  font-size: 82px;
+  letter-spacing: -3px;
+  position: inherit;
+  top: 210px;
+}
+
+#weatherHourly ul li:nth-child(4) {
+  font-size: 40px;
+  font-family: "Roboto-Light";
+  letter-spacing: -3px;
+  position: inherit;
+  top: 310px;
+}
+
+#weatherHourly ul li:nth-child(4) img {
+  width: 22px;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+
+#firstHour {
+  left: 25px;
+}
+
+#secondHour {
+  left: 250px;
+}
+
+#thirdHour {
+  left: 480px;
+}
+
+.hide {
+  display: none;
 }
 
 .placeholder {
@@ -107,48 +202,4 @@ body {
 
 .placeholder.invisible {
   opacity: 0;
-}
-
-#uvIndexNumber {
-  text-align: center;
-  margin: 50px auto 0;
-  font-size: 30em;
-  font-weight: lighter;
-}
-
-#lineBreak {
-  border-top: 4px solid rgba(255,255,255,.5);
-  margin-bottom: 50px;
-}
-
-#uvInfo {
-  text-align: center;
-}
-
-#uvInfo h3 {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 5.5em;
-  font-weight: lighter;
-  height: 175px;
-  line-height: 175px;
-  margin: 0 50px 0 0;
-}
-
-#uvInfo img {
-  height: 175px;
-  vertical-align: bottom;
-
-}
-
-#uvInfo h4 {
-  display: block;
-  width: 650px;
-  margin: 50px auto;
-  padding: 30px 25px;
-  font-size: 3em;
-  font-weight: lighter;
-  border: 6px solid rgba(255,255,255,.8);
-  border-radius: 2px;
-  padding: 
 }

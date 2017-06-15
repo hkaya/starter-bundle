@@ -8,6 +8,6 @@
 module.exports = {
   appName: JSON.stringify(require('./package.json').name),
   campaign: 'LinkNYC Starter Bundle',
-  datasetID: 'com.intersection.media.data.weather.epa.uvi',
+  datasetID: 'com.intersection.media.data.news.weather.wnbc',
   placeholderID: 'placeholder',
 };

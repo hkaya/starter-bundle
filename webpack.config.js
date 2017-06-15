@@ -34,7 +34,7 @@ module.exports = {
         loader: 'style-loader!css-loader',
         exclude: /node_modules/
       }, {
-        test: /\.(png|jpg|gif|jpeg|otf|svg)$/,
+        test: /\.(png|jpg|gif|jpeg|otf|ttf|svg)$/,
         loader: 'file-loader', exclude: /node_modules/,
         query: {name: './[path][hash].[ext]'}
       }, {

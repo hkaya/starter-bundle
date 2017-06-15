@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 require('../styles/css/global.css');
 import Placeholder from './cortex/placeholder.js';
 import Logger from './cortex/logger.js';
@@ -11,7 +9,6 @@ class View {
     this.rows = [];
     this.deviceId = '';
     this.productionEnv = process.env.NODE_ENV !== 'development';
-    this.strUtcOffset = '-0400';
 
     this.creativeContainer = window.document.getElementById(
 		'creativeContainer');
@@ -19,47 +16,8 @@ class View {
     this.creativeContainerDebugger = window.document.getElementById(
     'creativeContainer-debugger');
 
-    this.uvIndexNumberDiv = window.document.getElementById(
-    'uvIndexNumber');
-
-    const self = this;
-
-    this.findUvIndexForCurrentHour = (currentHour) => {
-      for (var i = 0; i < this.rows[0].data.length; i++) {
-        let datasetHour = this.parseOutHour(this.rows[0].data[i].DATE_TIME);
-        if (datasetHour === currentHour) {
-          return this.rows[0].data[i].UV_VALUE;
-        }
-      }
-    }
-
-    this.getCurrentHour = () => {
-      // Returns a number 0 through 23 representing the current hour
-      return moment().utcOffset(self.strUtcOffset).hour();
-    }
-
-    this.parseOutHour = (dateTime) => {
-      const hourRegexp = /(\s\d\d\s)/g;
-      let dateTimeHour = hourRegexp.exec(dateTime);
-      dateTimeHour = Number(dateTimeHour[1]);
-
-      const periodRegexp = /(\bAM\b|\bPM\b)/gi;
-      let period = periodRegexp.exec(dateTime);
-      period = period[1];
-
-      if (dateTimeHour === 12) {
-        if (period === 'AM') {
-          return 0;
-        } 
-        return 12;
-      }
-
-      if (period === 'PM') {
-        return dateTimeHour + 12;
-      }
-      
-      return dateTimeHour;
-    }
+    this.weatherImage = window.document.getElementById(
+    'weatherImage');
   }
 
   /**
@@ -104,10 +62,8 @@ class View {
 
     if (data && data.length > 0) {
       this.deviceId = data[0]._device_id;
-      let currentHour = this.getCurrentHour();
-      let uvIndex = this.findUvIndexForCurrentHour(currentHour)
-
-      this.uvIndexNumberDiv.innerHTML = uvIndex;
+      console.log(data)
+      this.weatherImage.src = data[0].weather.rss.channel[0].item[0]['media:content'][0].$.url;
     }
   }
 
