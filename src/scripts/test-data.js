@@ -10,312 +10,312 @@ const TEST_DATA = [{
 	_update_date: 'Jun 14th, 2017 10:51 am',
 	_device_id: '*',
 	_index: 'nyc',
-	news: {  
-		"rss":{  
-			"$":{  
-				"version":"2.0",
-				"xmlns:media":"http://search.yahoo.com/mrss/",
-				"xmlns:atom":"http://www.w3.org/2005/Atom",
-				"xmlns:photo":"http://www.pheed.com/pheed/",
-				"xmlns:dc":"http://purl.org/dc/elements/1.1/"
-			},
-			"channel":[  
-			{  
-				"title":[  
-				"NBC New York - LinkNYC"
-				],
-				"description":[  
-				""
-				],
-				"copyright":[  
-				"Copyright 2017"
-				],
-				"link":[  
-				"http://www.nbcnewyork.com/news/linknyc"
-				],
-				"image":[  
-				{  
-					"url":[  
-					"http://media.nbcnewyork.com/designimages/4NY_Horizontal.jpg"
-					],
-					"title":[  
-					"NBC New York"
-					],
-					"link":[  
-					"http://www.nbcnewyork.com"
-					]
-				}
-				],
-				"atom:link":[  
-				{  
-					"$":{  
-						"href":"http://www.nbcnewyork.com/news/linknyc",
-						"rel":"self",
-						"type":"application/rss+xml"
-					}
-				}
-				],
-				"language":[  
-				"en-us"
-				],
-				"pubDate":[  
-				"Tue, 13 Jun 2017 12:10:20 -0400"
-				],
-				"lastBuildDate":[  
-				"Tue, 13 Jun 2017 12:10:20 -0400"
-				],
-				"generator":[  
-				"NBC Owned Television Stations"
-				],
-				"item":[  
-				{  
-					"dc:creator":[  
-					""
-					],
-					"title":[  
-					"Long Island Rail Road Delays Are Worst in 10 Years: Report"
-					],
-					"link":[  
-					"http://www.nbcnewyork.com/news/linknyc/Long-Island-Rail-Road-Delays-Worst-10-Years-427259533.html"
-					],
-					"guid":[  
-					"http://www.nbcnewyork.com/news/linknyc/Long-Island-Rail-Road-Delays-Worst-10-Years-427259533.html"
-					],
-					"pubDate":[  
-					"Thu, 08 Jun 2017 17:31:42 -0400"
-					],
-					"category":[  
-					"Article"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/images/lirr+credit+rick+holtman.jpg",
-							"medium":"image",
-							"type":"image/jpeg"
-						},
-						"media:title":[  
-						{  
-							"_":"Commuters pack a LIRR platform at Penn Station Tuesday",
-							"$":{  
-								"type":"html"
-							}
-						}
-						],
-						"media:description":[  
-						{  
-							"_":"Commuters pack a LIRR platform at Penn Station Tuesday",
-							"$":{  
-								"type":"html"
-							}
-						}
-						],
-						"media:credit":[  
-						"Dan Schenker"
-						],
-						"media:thumbnail":[  
-						{  
-							"$":{  
-								"url":"http://media.nbcnewyork.com/images/1200*675/lirr+credit+rick+holtman.jpg",
-								"width":"133",
-								"height":"75"
-							}
-						}
-						],
-						"photo:thumbnail":[  
-						"http://media.nbcnewyork.com/images/1200*675/lirr+credit+rick+holtman.jpg"
-						]
-					}
-					],
-					"description":[  
-					"Evening rush-hour cancellations and delays on New York's Long Island Rail Road have reached their highest level in 10 years, according to transit data analyzed by the Wall Street Journal. Copyright Associated Press / NBC New York Photo Credit: Rick Holtman"
-					]
-				},
-				{  
-					"dc:creator":[  
-					""
-					],
-					"title":[  
-					"New Underground Library Offers You Free Books for Commute"
-					],
-					"link":[  
-					"http://www.nbcnewyork.com/news/linknyc/subway-library-train-e-books-mta-427248663.html"
-					],
-					"guid":[  
-					"http://www.nbcnewyork.com/news/linknyc/subway-library-train-e-books-mta-427248663.html"
-					],
-					"pubDate":[  
-					"Thu, 08 Jun 2017 13:32:33 -0400"
-					],
-					"category":[  
-					"Article"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/images/subwaycampaignmta.jpg",
-							"medium":"image",
-							"type":"image/jpeg"
-						},
-						"media:title":[  
-						{  
-							"$":{  
-								"type":"html"
-							}
-						}
-						],
-						"media:credit":[  
-						""
-						],
-						"media:thumbnail":[  
-						{  
-							"$":{  
-								"url":"http://media.nbcnewyork.com/images/1200*675/subwaycampaignmta.jpg",
-								"width":"133",
-								"height":"75"
-							}
-						}
-						],
-						"photo:thumbnail":[  
-						"http://media.nbcnewyork.com/images/1200*675/subwaycampaignmta.jpg"
-						]
-					}
-					],
-					"description":[  
-					"The New York Public Library and the MTA launched the Subway Library campaign, promoting reading while on the train using MTA's technology. Photo Credit: Jeesu Kim/MTA"
-					]
-				},
-				{  
-					"dc:creator":[  
-					""
-					],
-					"title":[  
-					"Former Bandmates Remember Chris Cornell with Empty Spotlight"
-					],
-					"link":[  
-					"http://www.nbcnewyork.com/news/linknyc/Former-Bandmates-Remember-Chris-Cornell-With-Empty-Spotlight-427243463.html"
-					],
-					"guid":[  
-					"http://www.nbcnewyork.com/news/linknyc/Former-Bandmates-Remember-Chris-Cornell-With-Empty-Spotlight-427243463.html"
-					],
-					"pubDate":[  
-					"Thu, 08 Jun 2017 13:11:52 -0400"
-					],
-					"category":[  
-					"Article"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/images/GettyImages-631710060-Chris-Cornell.jpg",
-							"medium":"image",
-							"type":"image/jpeg"
-						},
-						"media:title":[  
-						{  
-							"_":"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
-							"$":{  
-								"type":"html"
-							}
-						}
-						],
-						"media:description":[  
-						{  
-							"_":"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
-							"$":{  
-								"type":"html"
-							}
-						}
-						],
-						"media:credit":[  
-						"Jordan Strauss/Invision/AP"
-						],
-						"media:thumbnail":[  
-						{  
-							"$":{  
-								"url":"http://media.nbcnewyork.com/images/1200*675/GettyImages-631710060-Chris-Cornell.jpg",
-								"width":"133",
-								"height":"75"
-							}
-						}
-						],
-						"photo:thumbnail":[  
-						"http://media.nbcnewyork.com/images/1200*675/GettyImages-631710060-Chris-Cornell.jpg"
-						]
-					}
-					],
-					"description":[  
-					"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone. It happened during the Prophets of Rage show in Berlin... Copyright Associated Press / NBC New York Photo Credit: Kevin Winter/Getty Images"
-					]
-				},
-				{  
-					"dc:creator":[  
-					"TOM CANAVAN"
-					],
-					"title":[  
-					"Giants Safeties Coach Thinks Collins Can Be Even Better"
-					],
-					"link":[  
-					"http://www.nbcnewyork.com/news/linknyc/New-York-Giants-Safeties-Coach-Thinks-Landon-Collins-Can-Be-Even-Better--427146393.html"
-					],
-					"guid":[  
-					"http://www.nbcnewyork.com/news/linknyc/New-York-Giants-Safeties-Coach-Thinks-Landon-Collins-Can-Be-Even-Better--427146393.html"
-					],
-					"pubDate":[  
-					"Thu, 08 Jun 2017 13:12:42 -0400"
-					],
-					"category":[  
-					"Article"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/images/GiantsvBengals.jpg",
-							"medium":"image",
-							"type":"image/jpeg"
-						},
-						"media:title":[  
-						{  
-							"_":"Landon Collins (21)",
-							"$":{  
-								"type":"html"
-							}
-						}
-						],
-						"media:description":[  
-						{  
-							"_":"Landon Collins (21)",
-							"$":{  
-								"type":"html"
-							}
-						}
-						],
-						"media:credit":[  
-						"The Associated Press/File"
-						],
-						"media:thumbnail":[  
-						{  
-							"$":{  
-								"url":"http://media.nbcnewyork.com/images/1200*800/GiantsvBengals.jpg",
-								"width":"133",
-								"height":"75"
-							}
-						}
-						],
-						"photo:thumbnail":[  
-						"http://media.nbcnewyork.com/images/1200*800/GiantsvBengals.jpg"
-						]
-					}
-					],
-					"description":[  
-					"During a breakout season in 2016, New York Giants safety Landon Collins went from one of the NFL's most promising young defensive players to one of its best overall, an All-Pro. Copyright Associated Press / NBC New York Photo Credit: Getty Images/File"
-					]
-				}
-				]
-			}
-			]
-		}
-	},
+	news: { 
+  "rss":{  
+    "$":{  
+      "version":"2.0",
+      "xmlns:media":"http://search.yahoo.com/mrss/",
+      "xmlns:atom":"http://www.w3.org/2005/Atom",
+      "xmlns:photo":"http://www.pheed.com/pheed/",
+      "xmlns:dc":"http://purl.org/dc/elements/1.1/"
+    },
+    "channel":[  
+      {  
+        "title":[  
+          "NBC New York - LinkNYC"
+        ],
+        "description":[  
+          ""
+        ],
+        "copyright":[  
+          "Copyright 2017"
+        ],
+        "link":[  
+          "http://www.nbcnewyork.com/news/linknyc"
+        ],
+        "image":[  
+          {  
+            "url":[  
+              "http://media.nbcnewyork.com/designimages/4NY_Horizontal.jpg"
+            ],
+            "title":[  
+              "NBC New York"
+            ],
+            "link":[  
+              "http://www.nbcnewyork.com"
+            ]
+          }
+        ],
+        "atom:link":[  
+          {  
+            "$":{  
+              "href":"http://www.nbcnewyork.com/news/linknyc",
+              "rel":"self",
+              "type":"application/rss+xml"
+            }
+          }
+        ],
+        "language":[  
+          "en-us"
+        ],
+        "pubDate":[  
+          "Fri, 16 Jun 2017 13:06:20 -0400"
+        ],
+        "lastBuildDate":[  
+          "Fri, 16 Jun 2017 13:06:20 -0400"
+        ],
+        "generator":[  
+          "NBC Owned Television Stations"
+        ],
+        "item":[  
+          {  
+            "dc:creator":[  
+              ""
+            ],
+            "title":[  
+              "Long Island Rail Road Delays Are Worst in 10 Years: Report"
+            ],
+            "link":[  
+              "http://www.nbcnewyork.com/news/linknyc/Long-Island-Rail-Road-Delays-Worst-10-Years-427259533.html"
+            ],
+            "guid":[  
+              "http://www.nbcnewyork.com/news/linknyc/Long-Island-Rail-Road-Delays-Worst-10-Years-427259533.html"
+            ],
+            "pubDate":[  
+              "Thu, 08 Jun 2017 17:31:42 -0400"
+            ],
+            "category":[  
+              "Article"
+            ],
+            "media:content":[  
+              {  
+                "$":{  
+                  "url":"http://media.nbcnewyork.com/images/lirr+credit+rick+holtman.jpg",
+                  "medium":"image",
+                  "type":"image/jpeg"
+                },
+                "media:title":[  
+                  {  
+                    "_":"Commuters pack a LIRR platform at Penn Station Tuesday",
+                    "$":{  
+                      "type":"html"
+                    }
+                  }
+                ],
+                "media:description":[  
+                  {  
+                    "_":"Commuters pack a LIRR platform at Penn Station Tuesday",
+                    "$":{  
+                      "type":"html"
+                    }
+                  }
+                ],
+                "media:credit":[  
+                  "Dan Schenker"
+                ],
+                "media:thumbnail":[  
+                  {  
+                    "$":{  
+                      "url":"http://media.nbcnewyork.com/images/1200*675/lirr+credit+rick+holtman.jpg",
+                      "width":"133",
+                      "height":"75"
+                    }
+                  }
+                ],
+                "photo:thumbnail":[  
+                  "http://media.nbcnewyork.com/images/1200*675/lirr+credit+rick+holtman.jpg"
+                ]
+              }
+            ],
+            "description":[  
+              " Evening rush-hour cancellations and delays on New York's Long Island Rail Road have reached their highest level in 10 years, according to transit data analyzed by the Wall Street Journal.Copyright Associated Press / NBC New York Photo Credit: Rick Holtman"
+            ]
+          },
+          {  
+            "dc:creator":[  
+              ""
+            ],
+            "title":[  
+              "New Underground Library Offers You Free Books for Commute"
+            ],
+            "link":[  
+              "http://www.nbcnewyork.com/news/linknyc/subway-library-train-e-books-mta-427248663.html"
+            ],
+            "guid":[  
+              "http://www.nbcnewyork.com/news/linknyc/subway-library-train-e-books-mta-427248663.html"
+            ],
+            "pubDate":[  
+              "Thu, 08 Jun 2017 13:32:33 -0400"
+            ],
+            "category":[  
+              "Article"
+            ],
+            "media:content":[  
+              {  
+                "$":{  
+                  "url":"http://media.nbcnewyork.com/images/subwaycampaignmta.jpg",
+                  "medium":"image",
+                  "type":"image/jpeg"
+                },
+                "media:title":[  
+                  {  
+                    "$":{  
+                      "type":"html"
+                    }
+                  }
+                ],
+                "media:credit":[  
+                  ""
+                ],
+                "media:thumbnail":[  
+                  {  
+                    "$":{  
+                      "url":"http://media.nbcnewyork.com/images/1200*675/subwaycampaignmta.jpg",
+                      "width":"133",
+                      "height":"75"
+                    }
+                  }
+                ],
+                "photo:thumbnail":[  
+                  "http://media.nbcnewyork.com/images/1200*675/subwaycampaignmta.jpg"
+                ]
+              }
+            ],
+            "description":[  
+              " The New York Public Library and the MTA launched the Subway Library campaign, promoting reading while on the train using MTA's technology.Photo Credit: Jeesu Kim/MTA"
+            ]
+          },
+          {  
+            "dc:creator":[  
+              ""
+            ],
+            "title":[  
+              "Former Bandmates Remember Chris Cornell with Empty Spotlight"
+            ],
+            "link":[  
+              "http://www.nbcnewyork.com/news/linknyc/Former-Bandmates-Remember-Chris-Cornell-With-Empty-Spotlight-427243463.html"
+            ],
+            "guid":[  
+              "http://www.nbcnewyork.com/news/linknyc/Former-Bandmates-Remember-Chris-Cornell-With-Empty-Spotlight-427243463.html"
+            ],
+            "pubDate":[  
+              "Thu, 08 Jun 2017 13:11:52 -0400"
+            ],
+            "category":[  
+              "Article"
+            ],
+            "media:content":[  
+              {  
+                "$":{  
+                  "url":"http://media.nbcnewyork.com/images/GettyImages-631710060-Chris-Cornell.jpg",
+                  "medium":"image",
+                  "type":"image/jpeg"
+                },
+                "media:title":[  
+                  {  
+                    "_":"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
+                    "$":{  
+                      "type":"html"
+                    }
+                  }
+                ],
+                "media:description":[  
+                  {  
+                    "_":"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
+                    "$":{  
+                      "type":"html"
+                    }
+                  }
+                ],
+                "media:credit":[  
+                  "Omaze"
+                ],
+                "media:thumbnail":[  
+                  {  
+                    "$":{  
+                      "url":"http://media.nbcnewyork.com/images/1200*675/GettyImages-631710060-Chris-Cornell.jpg",
+                      "width":"133",
+                      "height":"75"
+                    }
+                  }
+                ],
+                "photo:thumbnail":[  
+                  "http://media.nbcnewyork.com/images/1200*675/GettyImages-631710060-Chris-Cornell.jpg"
+                ]
+              }
+            ],
+            "description":[  
+              "Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone. It happened during the Prophets of Rage show in Berlin...Copyright Associated Press / NBC New York Photo Credit: Kevin Winter/Getty Images"
+            ]
+          },
+          {  
+            "dc:creator":[  
+              "TOM CANAVAN"
+            ],
+            "title":[  
+              "Giants Safeties Coach Thinks Collins Can Be Even Better"
+            ],
+            "link":[  
+              "http://www.nbcnewyork.com/news/linknyc/New-York-Giants-Safeties-Coach-Thinks-Landon-Collins-Can-Be-Even-Better--427146393.html"
+            ],
+            "guid":[  
+              "http://www.nbcnewyork.com/news/linknyc/New-York-Giants-Safeties-Coach-Thinks-Landon-Collins-Can-Be-Even-Better--427146393.html"
+            ],
+            "pubDate":[  
+              "Thu, 08 Jun 2017 13:12:42 -0400"
+            ],
+            "category":[  
+              "Article"
+            ],
+            "media:content":[  
+              {  
+                "$":{  
+                  "url":"http://media.nbcnewyork.com/images/GiantsvBengals.jpg",
+                  "medium":"image",
+                  "type":"image/jpeg"
+                },
+                "media:title":[  
+                  {  
+                    "_":"Landon Collins (21)",
+                    "$":{  
+                      "type":"html"
+                    }
+                  }
+                ],
+                "media:description":[  
+                  {  
+                    "_":"Landon Collins (21)",
+                    "$":{  
+                      "type":"html"
+                    }
+                  }
+                ],
+                "media:credit":[  
+                  "The Associated Press/File"
+                ],
+                "media:thumbnail":[  
+                  {  
+                    "$":{  
+                      "url":"http://media.nbcnewyork.com/images/1200*800/GiantsvBengals.jpg",
+                      "width":"133",
+                      "height":"75"
+                    }
+                  }
+                ],
+                "photo:thumbnail":[  
+                  "http://media.nbcnewyork.com/images/1200*800/GiantsvBengals.jpg"
+                ]
+              }
+            ],
+            "description":[  
+              "During a breakout season in 2016, New York Giants safety Landon Collins went from one of the NFL's most promising young defensive players to one of its best overall, an All-Pro. Copyright Associated Press / NBC New York Photo Credit: Getty Images/File"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+},
 	weather: {  
 		"rss":{  
 			"$":{  

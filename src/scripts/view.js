@@ -12,7 +12,7 @@ class View {
     this.productionEnv = process.env.NODE_ENV !== 'development';
 
     this.creativeContainer = window.document.getElementById(
-		'creativeContainer');
+    'creativeContainer');
 
     this.creativeContainerDebugger = window.document.getElementById(
     'creativeContainer-debugger');
@@ -75,20 +75,20 @@ class View {
     if (data && data.length > 0) {
       this.deviceId = data[0]._device_id;
 
-      const list = [];
-      for (let i = 0; i < this.rows[0].news.rss.channel[0].item.length; i++) {
-        const img = new Image();
-        img.onload = function() {
-            const index = list.indexOf(this);
-            if (index !== -1) {
-              // remove image from the array once it's loaded
-              // for memory consumption reasons
-              list.splice(index, 1);
-            }
-        }
-        list.push(img);
-        img.src = this.rows[0].news.rss.channel[0].item[i]['media:content'][0].$.url;
-      }
+      // const list = [];
+      // for (let i = 0; i < this.rows[0].news.rss.channel[0].item.length; i++) {
+      //   const img = new Image();
+      //   img.onload = function() {
+      //       const index = list.indexOf(this);
+      //       if (index !== -1) {
+      //         // remove image from the array once it's loaded
+      //         // for memory consumption reasons
+      //         list.splice(index, 1);
+      //       }
+      //   }
+      //   list.push(img);
+      //   img.src = this.rows[0].news.rss.channel[0].item[i]['media:content'][0].$.url;
+      // }
     }
   }
 
