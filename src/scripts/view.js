@@ -8,6 +8,7 @@ class View {
     this.placeholder = new Placeholder();
     this.rows = [];
     this.deviceId = '';
+    this.index = 0;
     this.productionEnv = process.env.NODE_ENV !== 'development';
 
     this.creativeContainer = window.document.getElementById(
@@ -16,8 +17,19 @@ class View {
     this.creativeContainerDebugger = window.document.getElementById(
     'creativeContainer-debugger');
 
-    this.weatherImage = window.document.getElementById(
-    'weatherImage');
+    this.storyDiv = window.document.getElementById(
+    'story');
+
+    this.storyHeader = window.document.getElementById(
+    'storyHeader');
+
+    this.updateIndex = () => {
+      this.index++;
+      if (this.rows[0].news.rss.channel[0].item[this.index] === null ||
+      this.rows[0].news.rss.channel[0].item[this.index] === undefined) {
+        this.index = 0;
+      }
+    }
   }
 
   /**
@@ -62,8 +74,21 @@ class View {
 
     if (data && data.length > 0) {
       this.deviceId = data[0]._device_id;
-      console.log(data)
-      this.weatherImage.src = data[0].weather.rss.channel[0].item[0]['media:content'][0].$.url;
+
+      for (var i = 0; i < array.length; i++) {
+        var img = new Image();
+        img.onload = function() {
+            var index = list.indexOf(this);
+            if (index !== -1) {
+                // remove image from the array once it's loaded
+                // for memory consumption reasons
+                list.splice(index, 1);
+            }
+        }
+        list.push(img);
+        img.src = array[i];
+    }
+      }
     }
   }
 
@@ -102,7 +127,14 @@ class View {
    */
 
   updateView() {
-
+    if (this.rows === null || this.rows.length === 0) {
+      return;
+    }
+    setTimeout(() => {
+      this.updateIndex();
+      this.storyDiv.style.backgroundImage= `url(${this.rows[0].news.rss.channel[0].item[this.index]['media:content'][0].$.url}`
+      this.storyHeader.innerText = this.rows[0].news.rss.channel[0].item[this.index].title;
+    }, 7500)
   }
 
   /**
@@ -126,6 +158,7 @@ class View {
       return;
     }else{
       this.placeholder.hide();
+      this.updateIndex();
     }
 
     Logger.log(`The view has ${this.rows.length} data rows.`);

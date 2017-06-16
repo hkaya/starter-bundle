@@ -52,7 +52,7 @@ body {
   overflow: hidden;
   display:none;
   background-repeat: none;
-  background-image: url("../../images/wnbcBackground.png");
+  background-image: url("../../images/wnbcNewsBackground.png");
 }
 
 #dateTime p {
@@ -83,115 +83,29 @@ body {
   left: 90px;
 }
 
-#weatherNow img {
-  position: absolute;
-  top: 670px;
-  left: 150px;
-  width: 250px;
-}
-
-#weatherNow h2 {
-  text-transform: uppercase;
-  position: absolute;
-  font-family: "Roboto";
-  font-weight: normal;
-  font-size: 68px;
-  top: 517px;
-  left: 190px;
-}
-
-#weatherNow h3 {
-  position: absolute;
-  font-family: "Roboto";
-  font-weight: normal;
-  font-size: 283px;
-  margin: 0;
-  top: 614px;
-  left: 469px;
-}
-
-#weatherNow h4 {
-  position: absolute;
-  font-family: "Roboto";
-  font-weight: normal;
-  font-size: 80px;
-  margin: 0;
-  top: 910px;
-  left: 190px;
-}
-
-#weatherNow h5 {
-  position: absolute;
-  font-family: "Roboto-Thin";
-  font-weight: normal;
-  font-size: 72px;
-  margin: 0;
-  top: 1004px;
-  left: 190px;
-}
-
-#weatherHourly {
-  position: absolute;
-  left: 189px;
-  top: 1148px;
-  height: 541px;
-  width: 1363px;
-  background-image: url(../../images/hourlyBackground.png);
+#story {
+  width: 1080px;
+  height: 706px;
   background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-#weatherHourly ul {
+  background-size: cover;
   position: absolute;
-  list-style: none;
-  text-transform: uppercase;
-  height: 441px;
-  padding: 0px;
+  left: 0px;
+  top: 496px;
 }
 
-#weatherHourly ul li {
-  width: 200px;
-  text-align: center;
-}
-
-#weatherHourly ul li:first-child {
-  font-size: 54px;
-  position: inherit;
-  top: 10px;
-}
-
-#weatherHourly ul li:nth-child(3) { 
-  font-size: 82px;
-  letter-spacing: -3px;
-  position: inherit;
-  top: 210px;
-}
-
-#weatherHourly ul li:nth-child(4) {
-  font-size: 40px;
-  font-family: "Roboto-Light";
-  letter-spacing: -3px;
-  position: inherit;
-  top: 310px;
-}
-
-#weatherHourly ul li:nth-child(4) img {
-  width: 22px;
-  margin-right: 5px;
-  position: relative;
-  top: 3px;
-}
-
-#firstHour {
-  left: 25px;
-}
-
-#secondHour {
-  left: 250px;
-}
-
-#thirdHour {
-  left: 480px;
+#story h1 {
+  background-color: rgba(36,40,59,.8);
+  color: white;
+  height: 194px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 65px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 20px 81px 0px;
 }
 
 .hide {
