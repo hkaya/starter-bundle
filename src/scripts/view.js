@@ -75,19 +75,19 @@ class View {
     if (data && data.length > 0) {
       this.deviceId = data[0]._device_id;
 
-      for (var i = 0; i < array.length; i++) {
-        var img = new Image();
+      const list = [];
+      for (let i = 0; i < this.rows[0].news.rss.channel[0].item.length; i++) {
+        const img = new Image();
         img.onload = function() {
-            var index = list.indexOf(this);
+            const index = list.indexOf(this);
             if (index !== -1) {
-                // remove image from the array once it's loaded
-                // for memory consumption reasons
-                list.splice(index, 1);
+              // remove image from the array once it's loaded
+              // for memory consumption reasons
+              list.splice(index, 1);
             }
         }
         list.push(img);
-        img.src = array[i];
-    }
+        img.src = this.rows[0].news.rss.channel[0].item[i]['media:content'][0].$.url;
       }
     }
   }
@@ -131,9 +131,10 @@ class View {
       return;
     }
     setTimeout(() => {
-      this.updateIndex();
       this.storyDiv.style.backgroundImage= `url(${this.rows[0].news.rss.channel[0].item[this.index]['media:content'][0].$.url}`
       this.storyHeader.innerText = this.rows[0].news.rss.channel[0].item[this.index].title;
+
+      this.updateIndex();
     }, 7500)
   }
 
@@ -158,6 +159,10 @@ class View {
       return;
     }else{
       this.placeholder.hide();
+
+      this.storyDiv.style.backgroundImage= `url(${this.rows[0].news.rss.channel[0].item[this.index]['media:content'][0].$.url}`
+      this.storyHeader.innerText = this.rows[0].news.rss.channel[0].item[this.index].title;
+
       this.updateIndex();
     }
 
