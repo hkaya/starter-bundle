@@ -171,6 +171,14 @@ OR
 ```
 $ make dist-custom app=${YOUR_CUSTOM_APP_NAME}
 ```
+* Build and package app local files (Package working files, unminified and not built to run in Prod)
+```
+$ make local-dist
+```
+OR
+```
+$ make local-dist-custom app=${YOUR_CUSTOM_APP_NAME}
+```
 
 ### Appendix
 * `Cortex:` Player on Link.
