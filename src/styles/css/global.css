@@ -30,7 +30,12 @@ html {
   src: url("../fonts/roboto/Roboto-Regular.ttf")
 }
 
-
+@font-face {
+  font-family: "Din";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/din-regular/din-regular.ttf")
+}
 
 body {
   margin: 0;
@@ -55,7 +60,8 @@ body {
   font-size: 48px;
   letter-spacing: -3px;
   color: #505050;
-  font-family: "Roboto-Light";
+  font-family: "Din";
+  font-weight: lighter;
   position: absolute;
 }
 
