@@ -162,8 +162,12 @@ class View {
 
       this.storyDiv.style.backgroundImage= `url(${this.rows[0].news.rss.channel[0].item[this.index]['media:content'][0].$.url}`
       this.storyHeader.innerText = this.rows[0].news.rss.channel[0].item[this.index].title;
-
-      this.updateIndex();
+      // if (this.rows[0].news === undefined || this.rows[0].news === null) {
+      //   this.creativeContainerDebugger.innerHTML = `<h2>No Data!</h2>`;  
+      // } else {
+      //   this.creativeContainerDebugger.innerHTML = `<h2>${JSON.stringify(this.rows[0].news)}</h2>`;
+      // }
+      // this.updateIndex();
     }
 
     Logger.log(`The view has ${this.rows.length} data rows.`);

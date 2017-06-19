@@ -10,7 +10,7 @@ const TEST_DATA = [{
 	_update_date: 'Jun 14th, 2017 10:51 am',
 	_device_id: '*',
 	_index: 'nyc',
-	news: { 
+	news: {  
   "rss":{  
     "$":{  
       "version":"2.0",
@@ -59,10 +59,10 @@ const TEST_DATA = [{
           "en-us"
         ],
         "pubDate":[  
-          "Fri, 16 Jun 2017 13:06:20 -0400"
+          "Mon, 19 Jun 2017 11:24:20 -0400"
         ],
         "lastBuildDate":[  
-          "Fri, 16 Jun 2017 13:06:20 -0400"
+          "Mon, 19 Jun 2017 11:24:20 -0400"
         ],
         "generator":[  
           "NBC Owned Television Stations"
@@ -128,7 +128,7 @@ const TEST_DATA = [{
               }
             ],
             "description":[  
-              " Evening rush-hour cancellations and delays on New York's Long Island Rail Road have reached their highest level in 10 years, according to transit data analyzed by the Wall Street Journal.Copyright Associated Press / NBC New York Photo Credit: Rick Holtman"
+              "Evening rush-hour cancellations and delays on New York's Long Island Rail Road have reached their highest level in 10 years, according to transit data analyzed by the Wall Street Journal. Copyright Associated Press / NBC New YorkPhoto Credit: Rick Holtman"
             ]
           },
           {  
@@ -182,7 +182,7 @@ const TEST_DATA = [{
               }
             ],
             "description":[  
-              " The New York Public Library and the MTA launched the Subway Library campaign, promoting reading while on the train using MTA's technology.Photo Credit: Jeesu Kim/MTA"
+              "The New York Public Library and the MTA launched the Subway Library campaign, promoting reading while on the train using MTA's technology.Photo Credit: Jeesu Kim/MTA"
             ]
           },
           {  
@@ -228,7 +228,7 @@ const TEST_DATA = [{
                   }
                 ],
                 "media:credit":[  
-                  "Omaze"
+                  "Kevork Djansezian/Getty Images for NARAS, File"
                 ],
                 "media:thumbnail":[  
                   {  
@@ -245,7 +245,7 @@ const TEST_DATA = [{
               }
             ],
             "description":[  
-              "Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone. It happened during the Prophets of Rage show in Berlin...Copyright Associated Press / NBC New York Photo Credit: Kevin Winter/Getty Images"
+              "Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone. It happened during the Prophets of Rage show in Berlin... Copyright Associated Press / NBC New YorkPhoto Credit: Kevin Winter/Getty Images"
             ]
           },
           {  
@@ -308,7 +308,7 @@ const TEST_DATA = [{
               }
             ],
             "description":[  
-              "During a breakout season in 2016, New York Giants safety Landon Collins went from one of the NFL's most promising young defensive players to one of its best overall, an All-Pro. Copyright Associated Press / NBC New York Photo Credit: Getty Images/File"
+              "During a breakout season in 2016, New York Giants safety Landon Collins went from one of the NFL's most promising young defensive players to one of its best overall, an All-Pro. Copyright Associated Press / NBC New YorkPhoto Credit: Getty Images/File"
             ]
           }
         ]
