@@ -34,7 +34,14 @@ html {
   font-family: "Din";
   font-style: normal;
   font-weight: 200;
-  src: url("../fonts/din-regular/din-regular.ttf")
+  src: url("../fonts/arthouse-din/AH-DIN-Regular.ttf") format('truetype')
+}
+
+@font-face {
+  font-family: "Din-Light";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/arthouse-din/AH-DIN-Light.ttf") format('truetype')
 }
 
 body {
@@ -67,7 +74,7 @@ body {
   font-size: 48px;
   letter-spacing: -3px;
   color: #505050;
-  font-family: "Din";
+  font-family: "Din-Light";
   font-weight: lighter;
   position: absolute;
 }

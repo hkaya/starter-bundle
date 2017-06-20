@@ -1,0 +1,80 @@
+
+FACEBOOK
+
+Oslash  $D8
+Latin Capital Letter O With Stroke
+
+U+00D8
+0216
+
+--------------------
+
+Twitter
+
+Acircumflex   $C2
+Latin Capital A With Circumflex
+
+U+00C2
+ALT+0194
+
+----------------------
+
+Instagram
+
+Ecircumflex   $CA
+Latin Capital E With Circumflex
+
+U+00CA
+ALT+0202
+
+----------------------
+
+Peacock Medium
+
+Icircumflex   $CE
+Latin Capital I With Circumflex
+
+U+00CE
+ALT+0206
+
+----------------------
+
+Peacock Open
+
+Ocircumflex   $D4
+Latin Capital O With Circumflex
+
+U+00D4
+ALT+0212
+
+----------------------
+
+Radar Sweep
+
+Ucircumflex   $DB
+Latin Capital U With Circumflex
+
+U+00DB
+ALT+0219
+
+----------------------
+
+Arthouse Logo
+
+Adieresis   $C4
+
+Latin Capital A With Diaeresis
+
+U+00C4
+ALT+0196
+
+----------------------
+
+Olympic Rings
+
+Odieresis  $D6
+Latin Capital O With Diaeresis
+
+U+00D6
+ALT+0214
+
