@@ -34,9 +34,8 @@ html {
   font-family: "Din";
   font-style: normal;
   font-weight: 200;
-  src: url("../fonts/din-regular/din-regular.ttf") format('truetype')
+  src: url("../fonts/arthouse-din/AH-DIN-Regular.ttf") format('truetype')
 }
-
 body {
   margin: 0;
 }
