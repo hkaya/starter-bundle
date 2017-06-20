@@ -20,21 +20,21 @@ html {
   font-family: "Roboto-Thin";
   font-style: normal;
   font-weight: 200;
-  src: url("../fonts/roboto/Roboto-Thin.ttf")
+  src: url("../fonts/roboto/Roboto-Thin.ttf") format('truetype')
 }
 
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 200;
-  src: url("../fonts/roboto/Roboto-Regular.ttf")
+  src: url("../fonts/roboto/Roboto-Regular.ttf") format('truetype')
 }
 
 @font-face {
   font-family: "Din";
   font-style: normal;
   font-weight: 200;
-  src: url("../fonts/din-regular/din-regular.ttf")
+  src: url("../fonts/din-regular/din-regular.ttf") format('truetype')
 }
 
 body {

@@ -62,7 +62,6 @@ class View {
 
     if (data && data.length > 0) {
       this.deviceId = data[0]._device_id;
-      console.log(data)
       this.weatherImage.src = data[0].weather.rss.channel[0].item[0]['media:content'][0].$.url;
     }
   }
