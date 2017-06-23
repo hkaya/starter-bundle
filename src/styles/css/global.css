@@ -1,5 +1,7 @@
 html {
   background-color: rgba(100,150,250,.4);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 @font-face {
@@ -62,24 +64,31 @@ body {
   background-image: url("../../images/wnbcBackground.png");
 }
 
-#dateTime p {
+#dateTime {
   text-transform: uppercase;
   font-size: 48px;
+  height: 200px;
+  width: 1000px;
   letter-spacing: -3px;
   color: #505050;
   font-family: "Din-Light";
   font-weight: lighter;
   position: absolute;
-}
-
-#dateTime p:first-child {
   top: 338px;
   left: 91px;
 }
 
+#dateTime p {
+
+}
+
+#dateTime p:first-child {
+  display: inline-block;
+}
+
 #dateTime p:last-child {
-  top: 338px;
-  left: 456px;
+  display: inline-block;
+  padding-left: 20px;
 }
 
 #lineBreak {
@@ -167,6 +176,11 @@ body {
   top: 10px;
 }
 
+#weatherHourly ul li:nth-child(2) {
+  position: inherit;
+  top: 90px;
+}
+
 #weatherHourly ul li:nth-child(3) { 
   font-size: 82px;
   letter-spacing: -3px;
@@ -189,15 +203,15 @@ body {
   top: 3px;
 }
 
-#firstHour {
+#firstHourBlock {
   left: 25px;
 }
 
-#secondHour {
+#secondHourBlock {
   left: 250px;
 }
 
-#thirdHour {
+#thirdHourBlock {
   left: 480px;
 }
 

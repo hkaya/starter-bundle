@@ -316,160 +316,148 @@ const TEST_DATA = [{
 			]
 		}
 	},
-	weather: {  
-		"rss":{  
-			"$":{  
-				"xmlns:atom":"http://www.w3.org/2005/Atom",
-				"xmlns:content":"http://purl.org/rss/1.0/modules/content/",
-				"version":"2.0",
-				"xmlns:media":"http://search.yahoo.com/mrss/"
-			},
-			"channel":[  
-			{  
-				"title":[  
-				"New York, NY"
-				],
-				"link":[  
-				"http://www.nbcnewyork.com/weather"
-				],
-				"atom:link":[  
-				{  
-					"$":{  
-						"href":"http://www.nbcnewyork.com/weather",
-						"rel":"self"
+	weather: {
+		"rss": {
+			"channel": [{
+				"atom:link": [{
+					"$": {
+						"rel": "self",
+						"href": "http://www.nbcnewyork.com/weather"
 					}
-				}
-				],
-				"language":[  
-				"en-us"
-				],
-				"lastBuildDate":[  
-				"Tue, 13 Jun 2017 14:33:20 -0700"
-				],
-				"item":[  
-				{  
-					"title":[  
-					"100F"
-					],
-					"iconCode":[  
-					"66"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/designimages/new_wx_66.png",
-							"medium":"image",
-							"type":"image/jpeg"
+				}],
+				"language": ["en-us"],
+				"link": ["http://www.nbcnewyork.com/weather"],
+				"lastBuildDate": ["Fri, 23 Jun 2017 12:00:19 -0700"],
+				"item": [{
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_67.png"
 						}
-					}
-					],
-					"description":[  
-					"Details: Broken Clouds, Feels like 101F, Humidity: 27, Precipitation: 0, Wind: 14mph"
-					]
-				},
-				{  
-					"title":[  
-					"Today: Currently 100F, High 97F, Low 73F, Broken Clouds"
-					],
-					"iconCode":[  
-					"69"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/designimages/new_wx_69.png",
-							"medium":"image",
-							"type":"image/jpeg"
+					}],
+					"iconCode": ["67"],
+					"description": ["Details: Overcast, Feels like 85F, Humidity: 74, Precipitation: 0, Wind: 15mph"],
+					"title": ["81F"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_69.png"
 						}
-					}
-					],
-					"description":[  
-					"Details: Mostly Cloudy, High 97F, Low 73F, Humidity: 56, Precipitation: 20, Wind: 15mph"
-					]
-				},
-				{  
-					"title":[  
-					"Wednesday: High 81F, Low 62F, Partly Cloudy"
-					],
-					"iconCode":[  
-					"66"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/designimages/new_wx_66.png",
-							"medium":"image",
-							"type":"image/jpeg"
+					}],
+					"iconCode": ["69"],
+					"description": ["Details: Mostly Cloudy, Humidity: 70, Precipitation: 20, Wind: 16mph"],
+					"title": ["3 PM: Temp 83F, Mostly Cloudy"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_67.png"
 						}
-					}
-					],
-					"description":[  
-					"Details: Partly Cloudy, High 81F, Low 62F, Humidity: 41, Precipitation: 0, Wind: 11mph"
-					]
-				},
-				{  
-					"title":[  
-					"Thursday: High 75F, Low 62F, Mostly Sunny"
-					],
-					"iconCode":[  
-					"65"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/designimages/new_wx_65.png",
-							"medium":"image",
-							"type":"image/jpeg"
+					}],
+					"iconCode": ["67"],
+					"description": ["Details: Cloudy, Humidity: 70, Precipitation: 20, Wind: 16mph"],
+					"title": ["4 PM: Temp 83F, Cloudy"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_67.png"
 						}
-					}
-					],
-					"description":[  
-					"Details: Mostly Sunny, High 75F, Low 62F, Humidity: 41, Precipitation: 0, Wind: 11mph"
-					]
-				},
-				{  
-					"title":[  
-					"Friday: High 71F, Low 67F, PM Showers"
-					],
-					"iconCode":[  
-					"87"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/designimages/new_wx_87.png",
-							"medium":"image",
-							"type":"image/jpeg"
+					}],
+					"iconCode": ["67"],
+					"description": ["Details: Cloudy, Humidity: 66, Precipitation: 20, Wind: 17mph"],
+					"title": ["5 PM: Temp 84F, Cloudy"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_96.png"
 						}
-					}
-					],
-					"description":[  
-					"Details: PM Showers, High 71F, Low 67F, Humidity: 69, Precipitation: 50, Wind: 11mph"
-					]
-				},
-				{  
-					"title":[  
-					"Saturday: High 77F, Low 71F, Cloudy"
-					],
-					"iconCode":[  
-					"67"
-					],
-					"media:content":[  
-					{  
-						"$":{  
-							"url":"http://media.nbcnewyork.com/designimages/new_wx_67.png",
-							"medium":"image",
-							"type":"image/jpeg"
+					}],
+					"iconCode": ["96"],
+					"description": ["Details: Scattered Thunderstorms, Humidity: 67, Precipitation: 40, Wind: 15mph"],
+					"title": ["6 PM: Temp 83F, Scattered Thunderstorms"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_95.png"
 						}
-					}
-					],
-					"description":[  
-					"Details: Cloudy, High 77F, Low 71F, Humidity: 73, Precipitation: 20, Wind: 11mph"
-					]
-				}
-				]
+					}],
+					"iconCode": ["95"],
+					"description": ["Details: Isolated Thunderstorms, Humidity: 75, Precipitation: 30, Wind: 14mph"],
+					"title": ["7 PM: Temp 80F, Isolated Thunderstorms"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_95.png"
+						}
+					}],
+					"iconCode": ["95"],
+					"description": ["Details: Isolated Thunderstorms, Humidity: 76, Precipitation: 30, Wind: 13mph"],
+					"title": ["8 PM: Temp 79F, Isolated Thunderstorms"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png"
+						}
+					}],
+					"iconCode": ["101"],
+					"description": ["Details: Scattered Thunderstorms, Humidity: 67, Precipitation: 50, Wind: 13mph"],
+					"title": ["9 PM: Temp 83F, Scattered Thunderstorms"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png"
+						}
+					}],
+					"iconCode": ["101"],
+					"description": ["Details: Scattered Thunderstorms, Humidity: 66, Precipitation: 50, Wind: 13mph"],
+					"title": ["10 PM: Temp 82F, Scattered Thunderstorms"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png"
+						}
+					}],
+					"iconCode": ["101"],
+					"description": ["Details: Scattered Thunderstorms, Humidity: 70, Precipitation: 50, Wind: 15mph"],
+					"title": ["11 PM: Temp 80F, Scattered Thunderstorms"]
+				}, {
+					"media:content": [{
+						"$": {
+							"type": "image/jpeg",
+							"medium": "image",
+							"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png"
+						}
+					}],
+					"iconCode": ["101"],
+					"description": ["Details: Scattered Thunderstorms, Humidity: 71, Precipitation: 40, Wind: 13mph"],
+					"title": ["12 AM: Temp 80F, Scattered Thunderstorms"]
+				}],
+				"title": ["New York, NY"]
+			}],
+			"$": {
+				"xmlns:media": "http://search.yahoo.com/mrss/",
+				"version": "2.0",
+				"xmlns:atom": "http://www.w3.org/2005/Atom",
+				"xmlns:content": "http://purl.org/rss/1.0/modules/content/"
 			}
-			]
 		}
 	}
 }];

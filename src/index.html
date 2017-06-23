@@ -9,35 +9,41 @@
   <body>
     <div id="creativeContainer" class="creativeContainer">
       <div id="dateTime">
-        <p>Friday, June 16</p>
-        <p>12:00 pm</p>
+        <p id="date">Friday, June 16</p>
+        <p id="time">12:00 pm</p>
       </div>
       <div id="lineBreak"></div>
       <div id="weatherNow">
         <h2>Right Now</h2>
-        <img id="weatherImage" src="">
-        <h3>77°</h3>
-        <h4>Mostly Sunny</h4>
-        <h5>Feels Like 75°</h5>
+        <img id="nowImag" src="">
+        <h3 id="nowTemp">77°</h3>
+        <h4 id="nowDesc">Mostly Sunny</h4>
+        <h5 id="nowFeel">Feels Like 75°</h5>
       </div>
       <div id="weatherHourly">
-        <ul id="firstHour">
-          <li>6pm</li>
-          <li><img src=""></li>
-          <li>74°</li>
-          <li><img src="images/raindrop.png">0%</li>
+        <ul id="firstHourBlock">
+          <li id="firstHour">6pm</li>
+          <li><img id="firstImag" src=""></li>
+          <li id="firstTemp">74°</li>
+          <li><img src="images/raindrop.png">
+            <span id="firstRain">0</span>%
+          </li>
         </ul>
-        <ul id="secondHour">
-          <li>7pm</li>
-          <li><img src=""></li>
-          <li>72°</li>
-          <li><img src="images/raindrop.png">0%</li>
+        <ul id="secondHourBlock">
+          <li id="secondHour">7pm</li>
+          <li><img id="secondImag" src=""></li>
+          <li id="secondTemp">72°</li>
+          <li><img src="images/raindrop.png">
+            <span id="secondRain">0</span>%
+          </li>
         </ul>
-        <ul id="thirdHour">
-          <li>8pm</li>
-          <li><img src=""></li>
-          <li>70°</li>
-          <li><img src="images/raindrop.png">0%</li>
+        <ul id="thirdHourBlock">
+          <li id="thirdHour">8pm</li>
+          <li><img id="thirdImag" src=""></li>
+          <li id="thirdTemp">70°</li>
+          <li><img src="images/raindrop.png">
+            <span id="thirdRain">0</span>%
+          </li>
         </ul>
       </div>
     </div>
