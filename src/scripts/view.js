@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import moment from 'moment';
 
 require('../styles/css/global.css');
@@ -117,7 +115,6 @@ class View {
    *
    */
   setData(data) {
-    // Verify that the data matches Silo structure.
     this.rows = data;
 
     if (data && data.length > 0) {
@@ -133,7 +130,6 @@ class View {
    */
   render() {
     Logger.log('Rendering a new view.');
-    console.log('date with utcOffset: ', this.getDate())
     if (!window.document.getElementById(GLOBAL_VARS.placeholderID)) {
       this.placeholder.render();
     }
@@ -186,7 +182,7 @@ class View {
       return;
     }
     this.placeholder.hide();
-    const weather = this.rows[0].weather.rss.channel[0]
+    const weather = this.rows[0].weather.rss.channel[0];
 
     this.mapData(weather, res => {
       this.dateContainer.innerHTML = this.getDate();
