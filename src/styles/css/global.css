@@ -103,6 +103,7 @@ body {
 #story {
   width: 1080px;
   height: 706px;
+  background-image: url('../../images/placeholderStory.png');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
