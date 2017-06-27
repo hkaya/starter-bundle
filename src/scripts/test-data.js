@@ -7,10 +7,10 @@
  */
 
 const TEST_DATA = [{
-	_update_date: 'Jun 14th, 2017 10:51 am',
-	_device_id: '*',
-	_index: 'nyc',
-	news: {  
+	"_update_date": "Jun 14th, 2017 10:51 am",
+	"_device_id": "*",
+	"_index": "nyc",
+	"news": {  
 		"rss":{  
 			"$":{  
 				"version":"2.0",
@@ -128,7 +128,7 @@ const TEST_DATA = [{
 					}
 					],
 					"description":[  
-					"Evening rush-hour cancellations and delays on New York's Long Island Rail Road have reached their highest level in 10 years, according to transit data analyzed by the Wall Street Journal. Copyright Associated Press / NBC New York Photo Credit: Rick Holtman"
+					"Evening rush-hour cancellations and delays on New Yorks Long Island Rail Road have reached their highest level in 10 years, according to transit data analyzed by the Wall Street Journal. Copyright Associated Press / NBC New York Photo Credit: Rick Holtman"
 					]
 				},
 				{  
@@ -182,7 +182,7 @@ const TEST_DATA = [{
 					}
 					],
 					"description":[  
-					"The New York Public Library and the MTA launched the Subway Library campaign, promoting reading while on the train using MTA's technology. Photo Credit: Jeesu Kim/MTA"
+					"The New York Public Library and the MTA launched the Subway Library campaign, promoting reading while on the train using MTAs technology. Photo Credit: Jeesu Kim/MTA"
 					]
 				},
 				{  
@@ -213,7 +213,7 @@ const TEST_DATA = [{
 						},
 						"media:title":[  
 						{  
-							"_":"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
+							"_":"Some of Chris Cornells former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
 							"$":{  
 								"type":"html"
 							}
@@ -221,7 +221,7 @@ const TEST_DATA = [{
 						],
 						"media:description":[  
 						{  
-							"_":"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
+							"_":"Some of Chris Cornells former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone.",
 							"$":{  
 								"type":"html"
 							}
@@ -245,7 +245,7 @@ const TEST_DATA = [{
 					}
 					],
 					"description":[  
-					"Some of Chris Cornell's former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone. It happened during the Prophets of Rage show in Berlin... Copyright Associated Press / NBC New York Photo Credit: Kevin Winter/Getty Images"
+					"Some of Chris Cornells former bandmates have paid tribute to the late singer by performing one of his hits with a spotlight trained on the microphone. It happened during the Prophets of Rage show in Berlin... Copyright Associated Press / NBC New York Photo Credit: Kevin Winter/Getty Images"
 					]
 				},
 				{  
@@ -308,7 +308,7 @@ const TEST_DATA = [{
 					}
 					],
 					"description":[  
-					"During a breakout season in 2016, New York Giants safety Landon Collins went from one of the NFL's most promising young defensive players to one of its best overall, an All-Pro. Copyright Associated Press / NBC New York Photo Credit: Getty Images/File"
+					"During a breakout season in 2016, New York Giants safety Landon Collins went from one of the NFLs most promising young defensive players to one of its best overall, an All-Pro. Copyright Associated Press / NBC New York Photo Credit: Getty Images/File"
 					]
 				}
 				]
@@ -316,27 +316,18 @@ const TEST_DATA = [{
 			]
 		}
 	},
-	weather: {
+	"weather": {
 	"rss": {
 		"$": {
-			"version": "2.0",
-			"xmlns:media": "http://search.yahoo.com/mrss/",
 			"xmlns:atom": "http://www.w3.org/2005/Atom",
-			"xmlns:content": "http://purl.org/rss/1.0/modules/content/"
+			"version": "2.0",
+			"xmlns:content": "http://purl.org/rss/1.0/modules/content/",
+			"xmlns:media": "http://search.yahoo.com/mrss/"
 		},
 		"channel": [{
-			"atom:link": [{
-				"$": {
-					"rel": "self",
-					"href": "http://www.nbcnewyork.com/weather"
-				}
-			}],
-			"title": ["New York, NY"],
-			"language": ["en-us"],
-			"lastBuildDate": ["Fri, 23 Jun 2017 13:39:20 -0700"],
-			"link": ["http://www.nbcnewyork.com/weather"],
 			"item": [{
 				"iconCode": ["66"],
+				"description": ["Details: Scattered Clouds, Feels like 76F, Humidity: 37, Precipitation: 0, Wind: 12mph"],
 				"media:content": [{
 					"$": {
 						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
@@ -344,119 +335,128 @@ const TEST_DATA = [{
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Broken Clouds, Feels like 90F, Humidity: 67, Precipitation: 0, Wind: 17mph"],
-				"title": ["84F"]
+				"title": ["76F"]
 			}, {
-				"iconCode": ["67"],
+				"iconCode": ["66"],
+				"description": ["Details: Partly Cloudy, Humidity: 36, Precipitation: 20, Wind: 12mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_67.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Cloudy, Humidity: 66, Precipitation: 20, Wind: 17mph"],
-				"title": ["5 PM: Temp 84F, Cloudy"]
+				"title": ["1  PM: Temp 78F, Partly Cloudy"]
 			}, {
-				"iconCode": ["96"],
+				"iconCode": ["66"],
+				"description": ["Details: Partly Cloudy, Humidity: 35, Precipitation: 20, Wind: 12mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_96.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Scattered Thunderstorms, Humidity: 67, Precipitation: 40, Wind: 15mph"],
-				"title": ["6 PM: Temp 83F, Scattered Thunderstorms"]
+				"title": ["2  PM: Temp 78F, Partly Cloudy"]
 			}, {
-				"iconCode": ["95"],
+				"iconCode": ["66"],
+				"description": ["Details: Partly Cloudy, Humidity: 37, Precipitation: 20, Wind: 13mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_95.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Isolated Thunderstorms, Humidity: 75, Precipitation: 30, Wind: 14mph"],
-				"title": ["7 PM: Temp 80F, Isolated Thunderstorms"]
+				"title": ["3  PM: Temp 78F, Partly Cloudy"]
 			}, {
-				"iconCode": ["95"],
+				"iconCode": ["66"],
+				"description": ["Details: Partly Cloudy, Humidity: 39, Precipitation: 20, Wind: 14mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_95.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Isolated Thunderstorms, Humidity: 76, Precipitation: 30, Wind: 13mph"],
-				"title": ["8 PM: Temp 79F, Isolated Thunderstorms"]
+				"title": ["4  PM: Temp 77F, Partly Cloudy"]
 			}, {
-				"iconCode": ["101"],
+				"iconCode": ["66"],
+				"description": ["Details: Partly Cloudy, Humidity: 40, Precipitation: 20, Wind: 15mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Scattered Thunderstorms, Humidity: 67, Precipitation: 50, Wind: 13mph"],
-				"title": ["9 PM: Temp 83F, Scattered Thunderstorms"]
+				"title": ["5  PM: Temp 76F, Partly Cloudy"]
 			}, {
-				"iconCode": ["101"],
+				"iconCode": ["66"],
+				"description": ["Details: Partly Cloudy, Humidity: 43, Precipitation: 20, Wind: 14mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Scattered Thunderstorms, Humidity: 66, Precipitation: 50, Wind: 13mph"],
-				"title": ["10 PM: Temp 82F, Scattered Thunderstorms"]
+				"title": ["6  PM: Temp 75F, Partly Cloudy"]
 			}, {
-				"iconCode": ["101"],
+				"iconCode": ["85"],
+				"description": ["Details: Sunny, Humidity: 42, Precipitation: 0, Wind: 13mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_85.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Scattered Thunderstorms, Humidity: 70, Precipitation: 50, Wind: 15mph"],
-				"title": ["11 PM: Temp 80F, Scattered Thunderstorms"]
+				"title": ["7  PM: Temp 76F, Sunny"]
 			}, {
-				"iconCode": ["101"],
+				"iconCode": ["85"],
+				"description": ["Details: Sunny, Humidity: 48, Precipitation: 0, Wind: 10mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_85.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Scattered Thunderstorms, Humidity: 71, Precipitation: 40, Wind: 13mph"],
-				"title": ["12 AM: Temp 80F, Scattered Thunderstorms"]
+				"title": ["8  PM: Temp 74F, Sunny"]
 			}, {
-				"iconCode": ["101"],
+				"iconCode": ["97"],
+				"description": ["Details: Clear, Humidity: 53, Precipitation: 0, Wind: 8mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_101.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_97.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Scattered Thunderstorms, Humidity: 74, Precipitation: 60, Wind: 11mph"],
-				"title": ["1 AM: Temp 78F, Scattered Thunderstorms"]
+				"title": ["9  PM: Temp 73F, Clear"]
 			}, {
-				"iconCode": ["116"],
+				"iconCode": ["97"],
+				"description": ["Details: Clear, Humidity: 53, Precipitation: 0, Wind: 6mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_116.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_97.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
 				}],
-				"description": ["Details: Thunderstorms, Humidity: 77, Precipitation: 60, Wind: 11mph"],
-				"title": ["2 AM: Temp 77F, Thunderstorms"]
-			}]
+				"title": ["10 PM: Temp 73F, Clear"]
+			}],
+			"link": ["http://www.nbcnewyork.com/weather"],
+			"language": ["en-us"],
+			"atom:link": [{
+				"$": {
+					"rel": "self",
+					"href": "http://www.nbcnewyork.com/weather"
+				}
+			}],
+			"lastBuildDate": ["Mon, 26 Jun 2017 09:38:20 -0700"],
+			"title": ["New York, NY"]
 		}]
 	}
 }

@@ -14,9 +14,10 @@ class View {
     this.productionEnv = process.env.NODE_ENV !== 'development';
     this.strUtcOffset = '-0400';
     const self = this;
+    this.weather = [];
 
     this.creativeContainer = window.document.getElementById(
-		'creativeContainer');
+    'creativeContainer');
 
     this.creativeContainerDebugger = window.document.getElementById(
     'creativeContainer-debugger');
@@ -52,29 +53,46 @@ class View {
       moment().utcOffset(self.strUtcOffset).format('h:mm a') 
     )
 
-    this.mapData = (weather, cb) => {
+    this.mapData = weather => {
       const targets = ['now', 'hourOne', 'hourTwo', 'hourThree'];
       const details = ['desc', 'humi', 'perc', 'wind'];
-      const weatherDetails = {};
+      let weatherDetails = {};
       for (var i = 0; i < 4; i++) {
-        const dayDetails = weather.item[i].description[0].match(/: ([^,]+)/g)
+        let dayDetails = weather.item[i].description[0].match(/: ([^,]+)/g)
         .map(match => ( match.replace(/(: )/, '') ))
         .reduce((result, item, index) => {
           result[details[index]] = item;
           return result;
         }, {})
 
-        dayDetails.temp = weather.item[i].title[0].match(/([0-9][0-9]F)/)[0].replace(/F/, '°');
         if (i === 0) {
-          dayDetails.feel = weather.item[i].description[0].match(/, ([^,]+)/)[1];
+          dayDetails.temp = weather.item[i].title[0].replace('F', '°');
+          const feel = weather.item[i].description[0].split(",")[1].trim()
+          dayDetails.feel = `${feel.substring(0, feel.length - 1)}°`
         } else {
-            dayDetails.hour = weather.item[i].title[0].match(/([0-9]?[0-9] (AM|PM))/g)[0].replace(/\s/g, '');
-            console.log(dayDetails.hour)
+          const target = weather.item[i].title[0].split(',')[0];
+          const temp = target.substring(target.length - 4, target.length).replace('F', '°');
+          const hour = target.substring(0, target.indexOf(":")).replace('  ', '').replace(' ', '');
+
+          dayDetails.temp = temp;
+          dayDetails.hour = hour;
         }
         weatherDetails[targets[i]] = dayDetails;
       }
 
-      cb(weatherDetails);
+      this.nowTemp.innerHTML = weatherDetails.now.temp;
+      this.nowDesc.innerHTML = weatherDetails.now.desc;
+      this.nowFeel.innerHTML = weatherDetails.now.feel;
+      this.firstHour.innerHTML = weatherDetails.hourOne.hour;
+      this.firstTemp.innerHTML = weatherDetails.hourOne.temp;
+      this.firstRain.innerHTML = weatherDetails.hourOne.perc
+      this.secondHour.innerHTML = weatherDetails.hourTwo.hour;
+      this.secondTemp.innerHTML = weatherDetails.hourTwo.temp;
+      this.secondRain.innerHTML = weatherDetails.hourTwo.perc
+      this.thirdHour.innerHTML = weatherDetails.hourThree.hour;
+      this.thirdTemp.innerHTML = weatherDetails.hourThree.temp;
+      this.thirdRain.innerHTML = weatherDetails.hourThree.perc;
+      console.log(weatherDetails)
     }
   }
 
@@ -115,6 +133,7 @@ class View {
    *
    */
   setData(data) {
+    // Verify that the data matches Silo structure.
     this.rows = data;
 
     if (data && data.length > 0) {
@@ -129,7 +148,6 @@ class View {
    *
    */
   render() {
-    Logger.log('Rendering a new view.');
     if (!window.document.getElementById(GLOBAL_VARS.placeholderID)) {
       this.placeholder.render();
     }
@@ -182,28 +200,14 @@ class View {
       return;
     }
     this.placeholder.hide();
-    const weather = this.rows[0].weather.rss.channel[0];
 
-    this.mapData(weather, res => {
-      this.dateContainer.innerHTML = this.getDate();
-      this.timeContainer.innerHTML = this.getTime();
-      this.nowTemp.innerHTML       = res.now.temp;
-      this.nowDesc.innerHTML       = res.now.desc;
-      this.nowFeel.innerHTML       = res.now.feel;
-      this.nowImag.src             = weather.item[0]['media:content'][0].$.url;
-      this.firstHour.innerHTML     = res.hourOne.hour;
-      this.firstTemp.innerHTML     = res.hourOne.temp;
-      this.firstImag.src           = weather.item[1]['media:content'][0].$.url;
-      this.firstRain.innerHTML     = res.hourOne.perc
-      this.secondHour.innerHTML    = res.hourTwo.hour;
-      this.secondTemp.innerHTML    = res.hourTwo.temp;
-      this.secondImag.src          = weather.item[2]['media:content'][0].$.url;
-      this.secondRain.innerHTML    = res.hourTwo.perc
-      this.thirdHour.innerHTML     = res.hourThree.hour;
-      this.thirdTemp.innerHTML     = res.hourThree.temp;
-      this.thirdImag.src           = weather.item[3]['media:content'][0].$.url;
-      this.thirdRain.innerHTML     = res.hourThree.perc;
-    });
+    const weather = this.rows[0].weather.rss.channel[0];
+    this.nowImag.src = weather.item[0]['media:content'][0].$.url;
+    this.firstImag.src = weather.item[1]['media:content'][0].$.url;
+    this.secondImag.src = weather.item[2]['media:content'][0].$.url;
+    this.thirdImag.src = weather.item[3]['media:content'][0].$.url;
+
+    this.mapData(weather);
 
     Logger.log(`The view has ${this.rows.length} data rows.`);
   }

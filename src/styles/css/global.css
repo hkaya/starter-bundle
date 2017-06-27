@@ -50,6 +50,17 @@ body {
   margin: 0;
 }
 
+#debugger{
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  left: 0;
+  width: 1080px;
+  height: 1920px;
+  color: white;
+}
+
 .creativeContainer {
   position: relative;
   width: 1080px;
@@ -116,7 +127,7 @@ body {
   left: 190px;
 }
 
-#weatherNow h3 {
+#weatherNow p {
   position: absolute;
   font-family: "Roboto";
   font-weight: normal;
