@@ -69,24 +69,27 @@ body {
   background-image: url("../../images/wnbcNewsBackground.png");
 }
 
-#dateTime p {
+#dateTime {
   text-transform: uppercase;
   font-size: 48px;
+  height: 200px;
+  width: 1000px;
   letter-spacing: -3px;
   color: #505050;
   font-family: "Din-Light";
   font-weight: lighter;
   position: absolute;
-}
-
-#dateTime p:first-child {
   top: 338px;
   left: 91px;
 }
 
+#dateTime p:first-child {
+  display: inline-block;
+}
+
 #dateTime p:last-child {
-  top: 338px;
-  left: 456px;
+  display: inline-block;
+  padding-left: 20px;
 }
 
 #lineBreak {

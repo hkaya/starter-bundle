@@ -2,6 +2,7 @@ require('../styles/css/global.css');
 import Placeholder from './cortex/placeholder.js';
 import Logger from './cortex/logger.js';
 import Tracker from './cortex/tracker.js';
+import moment from 'moment';
 
 class View {
   constructor() {
@@ -10,6 +11,8 @@ class View {
     this.deviceId = '';
     this.index = 0;
     this.productionEnv = process.env.NODE_ENV !== 'development';
+    this.strUtcOffset = '-0400';
+    const self = this;
 
     this.creativeContainer = window.document.getElementById(
     'creativeContainer');
@@ -17,11 +20,22 @@ class View {
     this.creativeContainerDebugger = window.document.getElementById(
     'creativeContainer-debugger');
 
+    this.dateContainer = window.document.getElementById('date');
+    this.timeContainer = window.document.getElementById('time');
+
     this.storyDiv = window.document.getElementById(
     'story');
 
     this.storyHeader = window.document.getElementById(
     'storyHeader');
+
+    this.getDate = () => (
+      moment().utcOffset(self.strUtcOffset).format('dddd, MMMM D')
+    )
+
+    this.getTime = () => (
+      moment().utcOffset(self.strUtcOffset).format('h:mm a') 
+    )
 
     this.updateIndex = () => {
       this.index++;
@@ -130,6 +144,8 @@ class View {
     if (this.rows === null || this.rows.length === 0) {
       return;
     }
+    this.dateContainer.innerHTML = this.getDate();
+    this.timeContainer.innerHTML = this.getTime();
   }
 
   /**
