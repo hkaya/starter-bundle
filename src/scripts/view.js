@@ -150,13 +150,6 @@ class View {
    */
   setData(data) {
     // Verify that the data matches Silo structure.
-    this.count++;
-    console.log(this.count, " count and data: ",data);
-    if (this.count % 5 === 0) {
-      data[0].weather.rss.channel[0].item[0].title[0] = 'F';
-    } else {
-      data[0].weather.rss.channel[0].item[0].title[0] = '79F';
-    }
     this.rows = data;
 
     if (data && data.length > 0) {
@@ -227,12 +220,10 @@ class View {
     const weather = this.rows[0].weather.rss.channel[0];
 
     this.checkIfData(weather, useCache => {
-      console.log('cachedDAta: ',this.cachedData)
       if (this.cachedData.length === 0) {
         this.placeholder.show();
         return;
       }
-      console.log(useCache)
       if (useCache) {
         this.mapData(this.cachedData);
       } else {
