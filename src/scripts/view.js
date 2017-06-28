@@ -14,6 +14,8 @@ class View {
     this.productionEnv = process.env.NODE_ENV !== 'development';
     this.strUtcOffset = '-0400';
     const self = this;
+    this.count = 0;
+    this.cachedData = [];
     this.weather = [];
 
     this.creativeContainer = window.document.getElementById(
@@ -80,6 +82,11 @@ class View {
         weatherDetails[targets[i]] = dayDetails;
       }
 
+      this.nowImag.src = weather.item[0]['media:content'][0].$.url;
+      this.firstImag.src = weather.item[1]['media:content'][0].$.url;
+      this.secondImag.src = weather.item[2]['media:content'][0].$.url;
+      this.thirdImag.src = weather.item[3]['media:content'][0].$.url;
+
       this.nowTemp.innerHTML = weatherDetails.now.temp;
       this.nowDesc.innerHTML = weatherDetails.now.desc;
       this.nowFeel.innerHTML = weatherDetails.now.feel;
@@ -93,6 +100,15 @@ class View {
       this.thirdTemp.innerHTML = weatherDetails.hourThree.temp;
       this.thirdRain.innerHTML = weatherDetails.hourThree.perc;
       console.log(weatherDetails)
+    }
+
+    this.checkIfData = (weather, cb) => {
+      if (weather.item[0].title[0].length <= 1) {
+        cb(true);
+      } else {
+        this.cachedData = JSON.parse(JSON.stringify(weather));
+        cb(false);
+      }
     }
   }
 
@@ -134,6 +150,13 @@ class View {
    */
   setData(data) {
     // Verify that the data matches Silo structure.
+    this.count++;
+    console.log(this.count, " count and data: ",data);
+    if (this.count % 5 === 0) {
+      data[0].weather.rss.channel[0].item[0].title[0] = 'F';
+    } else {
+      data[0].weather.rss.channel[0].item[0].title[0] = '79F';
+    }
     this.rows = data;
 
     if (data && data.length > 0) {
@@ -202,12 +225,20 @@ class View {
     this.placeholder.hide();
 
     const weather = this.rows[0].weather.rss.channel[0];
-    this.nowImag.src = weather.item[0]['media:content'][0].$.url;
-    this.firstImag.src = weather.item[1]['media:content'][0].$.url;
-    this.secondImag.src = weather.item[2]['media:content'][0].$.url;
-    this.thirdImag.src = weather.item[3]['media:content'][0].$.url;
 
-    this.mapData(weather);
+    this.checkIfData(weather, useCache => {
+      console.log('cachedDAta: ',this.cachedData)
+      if (this.cachedData.length === 0) {
+        this.placeholder.show();
+        return;
+      }
+      console.log(useCache)
+      if (useCache) {
+        this.mapData(this.cachedData);
+      } else {
+        this.mapData(weather);
+      }
+    });
 
     Logger.log(`The view has ${this.rows.length} data rows.`);
   }
