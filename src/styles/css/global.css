@@ -33,6 +33,13 @@ html {
 }
 
 @font-face {
+  font-family: "Roboto-Medium";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/roboto/Roboto-Medium.ttf") format('truetype')
+}
+
+@font-face {
   font-family: "Din";
   font-style: normal;
   font-weight: 200;
@@ -117,24 +124,34 @@ body {
   width: 250px;
 }
 
-#weatherNow h2 {
+#weatherNow p {
   text-transform: uppercase;
   position: absolute;
   font-family: "Roboto";
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 68px;
   top: 517px;
   left: 190px;
 }
 
-#weatherNow p {
+#weatherNow h2 {
   position: absolute;
   font-family: "Roboto";
-  font-weight: normal;
-  font-size: 283px;
+  font-weight: lighter;
+  letter-spacing: -10px;
+  font-size: 265px;
+  display: inline-block;
   margin: 0;
-  top: 614px;
+  top: 634px;
   left: 469px;
+}
+
+#weatherNow span {
+  font-family: "Roboto";
+  font-size: 230px;
+  position: absolute;
+  top: 620px;
+  left: 770px;
 }
 
 #weatherNow h4 {

@@ -335,7 +335,7 @@ const TEST_DATA = [{
 						"type": "image/jpeg"
 					}
 				}],
-				"title": ["76F"]
+				"title": ["65F"]
 			}, {
 				"iconCode": ["66"],
 				"description": ["Details: Partly Cloudy, Humidity: 36, Precipitation: 20, Wind: 12mph"],
