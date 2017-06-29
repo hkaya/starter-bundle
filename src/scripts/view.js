@@ -150,7 +150,7 @@ class View {
    */
   setData(data) {
     // Verify that the data matches Silo structure.
-    this.rows = data;
+    this.rows = JSON.parse(JSON.stringify(data));
 
     if (data && data.length > 0) {
       this.deviceId = data[0]._device_id;
@@ -217,7 +217,7 @@ class View {
     }
     this.placeholder.hide();
 
-    const weather = this.rows[0].weather.rss.channel[0];
+    const weather = JSON.parse(JSON.stringify(this.rows[0].weather.rss.channel[0]));
 
     this.checkIfData(weather, useCache => {
       if (this.cachedData.length === 0) {
