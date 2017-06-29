@@ -73,7 +73,7 @@ const TEST_DATA = [{
               ""
             ],
             "title":[  
-              "Long Island Rail Road Delays Are Worst in 10 Years: Report"
+              "Long Island Rail Road Delays"
             ],
             "link":[  
               "http://www.nbcnewyork.com/news/linknyc/Long-Island-Rail-Road-Delays-Worst-10-Years-427259533.html"
@@ -136,7 +136,7 @@ const TEST_DATA = [{
               ""
             ],
             "title":[  
-              "New Underground Library Offers You Free Books for Commute"
+              "New Underground Library Offers"
             ],
             "link":[  
               "http://www.nbcnewyork.com/news/linknyc/subway-library-train-e-books-mta-427248663.html"
@@ -190,7 +190,7 @@ const TEST_DATA = [{
               ""
             ],
             "title":[  
-              "Former Bandmates Remember Chris Cornell with Empty Spotlight"
+              "Bandmates Remember Chris Cornell with Empty Spotlight"
             ],
             "link":[  
               "http://www.nbcnewyork.com/news/linknyc/Former-Bandmates-Remember-Chris-Cornell-With-Empty-Spotlight-427243463.html"

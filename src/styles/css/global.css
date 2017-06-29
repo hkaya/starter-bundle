@@ -104,22 +104,35 @@ body {
   top: 496px;
 }
 
-#story h1 {
-  background-color: rgba(36,40,59,.8);
-  color: white;
+#story ul {
   height: 194px;
-  font-family: "Din";
-  overflow: hidden;
+  background-color: rgba(36,40,59,.8);
   width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
-  font-size: 62px;
-  line-height: 70px;
   position: absolute;
-  text-shadow: 2px 3px 0px rgba(0,0,0,.7);
   bottom: 0px;
+  padding: 0px 75px 0px 75px;
   left: 0px;
   margin: 0px;
-  padding: 25px 81px 0px;
+}
+
+#story li {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  position: relative;
+  bottom: 2px;
+  list-style: none;
+  height: 194px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Din";
+  font-size: 62px;
+  line-height: 70px;
+  text-shadow: 2px 3px 0px rgba(0,0,0,.7);
 }
 
 .hide {
