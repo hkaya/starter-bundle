@@ -16,6 +16,7 @@ class View {
     const self = this;
     this.count = 0;
     this.cachedData = [];
+    this.lastCachedHour = undefined;
     this.weather = [];
 
     this.creativeContainer = window.document.getElementById(
@@ -53,6 +54,10 @@ class View {
 
     this.getTime = () => (
       moment().utcOffset(self.strUtcOffset).format('h:mm a') 
+    )
+
+    this.getHour = () => (
+      moment().utcOffset(self.strUtcOffset).format('h') 
     )
 
     this.mapData = weather => {
@@ -106,7 +111,9 @@ class View {
       if (weather.item[0].title[0].length <= 1) {
         cb(true);
       } else {
-        this.cachedData = JSON.parse(JSON.stringify(weather));
+        const newWeather = JSON.parse(JSON.stringify(weather));
+        this.cachedData = newWeather;
+        this.lastCachedHour = Number(newWeather.item[1].title[0].split(':')[0].trim().substring(0,2).trim())
         cb(false);
       }
     }
@@ -225,6 +232,9 @@ class View {
         return;
       }
       if (useCache) {
+        if (this.lastCachedHour !== Number(this.getHour())) {
+          this.placeholder.show();
+        }
         this.mapData(this.cachedData);
       } else {
         this.mapData(weather);
