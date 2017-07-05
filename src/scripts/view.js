@@ -73,7 +73,13 @@ class View {
         }, {})
 
         if (i === 0) {
-          dayDetails.temp = weather.item[i].title[0].replace('F', '°');
+          const temp = weather.item[i].title[0].trim().replace('F', '');
+          let imageTemp = [];
+          for (var k = 0; k < temp.length; k++) {
+            imageTemp.push(`<img src="images/${temp[k]}.png" />`)
+          }
+          dayDetails.temp = `${imageTemp.join('')}<img src="images/o.png" />`;
+          console.log(dayDetails.temp)
           const feel = weather.item[i].description[0].split(",")[1].trim()
           dayDetails.feel = `${feel.substring(0, feel.length - 1)}°`
         } else {
@@ -98,6 +104,7 @@ class View {
       this.firstImag.src = paths[1];
       this.secondImag.src = paths[2];
       this.thirdImag.src = paths[3];
+
 
       this.nowTemp.innerHTML = weatherDetails.now.temp;
       this.nowDesc.innerHTML = weatherDetails.now.desc;
