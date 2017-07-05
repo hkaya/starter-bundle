@@ -87,10 +87,17 @@ class View {
         weatherDetails[targets[i]] = dayDetails;
       }
 
-      this.nowImag.src = weather.item[0]['media:content'][0].$.url;
-      this.firstImag.src = weather.item[1]['media:content'][0].$.url;
-      this.secondImag.src = weather.item[2]['media:content'][0].$.url;
-      this.thirdImag.src = weather.item[3]['media:content'][0].$.url;
+      let paths = [];
+      for (var j = 0; j < 4; j++) {
+        let path = weather.item[j]['media:content'][0].$.url;
+        paths.push(`../images/${path.substring(path.lastIndexOf('_') + 1, path.lastIndexOf('.png'))}.png`)
+
+      }
+
+      this.nowImag.src = paths[0];
+      this.firstImag.src = paths[1];
+      this.secondImag.src = paths[2];
+      this.thirdImag.src = paths[3];
 
       this.nowTemp.innerHTML = weatherDetails.now.temp;
       this.nowDesc.innerHTML = weatherDetails.now.desc;
