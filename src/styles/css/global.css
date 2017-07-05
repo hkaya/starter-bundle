@@ -120,7 +120,7 @@ body {
 #weatherNow img {
   position: absolute;
   top: 670px;
-  left: 150px;
+  left: 190px;
   width: 250px;
 }
 
@@ -196,6 +196,10 @@ body {
 #weatherHourly ul li {
   width: 200px;
   text-align: center;
+}
+
+#weatherHourly ul li img {
+  width: 120px;
 }
 
 #weatherHourly ul li:first-child {
