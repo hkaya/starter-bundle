@@ -90,7 +90,7 @@ class View {
       let paths = [];
       for (var j = 0; j < 4; j++) {
         let path = weather.item[j]['media:content'][0].$.url;
-        paths.push(`../images/${path.substring(path.lastIndexOf('_') + 1, path.lastIndexOf('.png'))}.png`)
+        paths.push(`images/${path.substring(path.lastIndexOf('_') + 1, path.lastIndexOf('.png'))}.png`)
 
       }
 
