@@ -330,7 +330,7 @@ const TEST_DATA = [{
 				"description": ["Details: Scattered Clouds, Feels like 76F, Humidity: 37, Precipitation: 0, Wind: 12mph"],
 				"media:content": [{
 					"$": {
-						"url": "http://media.nbcnewyork.com/designimages/new_wx_66.png",
+						"url": "http://media.nbcnewyork.com/designimages/new_wx_75.png",
 						"medium": "image",
 						"type": "image/jpeg"
 					}
